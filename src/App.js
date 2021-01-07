@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import ParticleComponent from './particle-container';
+import Navbar from './navbar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* ----Navbar----- */}
+      <Navbar />
+      {/* ----Landing Page----- */}
+      <div className="welcome">
+        <div className="wecoleText">
+          Hello, I'm <span className="inlineColor"> Jared Usher</span>.
+          <br />I am a <span className="inlineColor">software engineer</span>.
+        </div>
+      </div>
+      <ParticleComponent />
+      {/* ----About----- */}
+      <div className="aboutContainer"> ABOUT </div>
+      {/* ----Portfolio----- */}
+      <div className="portfolioContainer"> PORTFOLIO </div>
+      {/* ----Contact/Footer----- */}
+      <div className="contactContainer"> CONTACT </div>
     </div>
   );
 }

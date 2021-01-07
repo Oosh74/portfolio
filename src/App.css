@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto&display=swap');
+
+body {
+  margin: 0;
+}
+img {
+  width: 500px;
+}
+/* ----LANDING----- */
+
+.particles-js {
+  background: #4f6272;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.inlineColor {
+  color: #cf1259;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.welcome {
+  position: absolute;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  font-size: 50px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 50px;
+  text-align: center;
+  z-index: 1;
+}
+
+/* ----NAVBAR----- */
+.nav-bar {
+  display: flex;
+  background-color: #404e5c;
+  padding-top: 5px;
+  height: 75px;
+  justify-content: right;
+  align-items: center;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%;
+  z-index: 9999; /* No content passes through navbar */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-bar a {
+  text-decoration: none !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-links a {
+  font-family: 'Josefin Sans', sans-serif;
+  display: inline-block;
+  margin: 1em;
+  text-transform: uppercase;
+  color: inherit !important;
+}
+
+/* ----ABOUT----- */
+
+.aboutContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+/* ----PORTFOLIO----- */
+
+.portfolioContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+/* ----CONTACT----- */
+
+.contactContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
 }
