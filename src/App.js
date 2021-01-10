@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 import ParticleComponent from './particle-container';
 import Navbar from './navbar';
 
@@ -10,8 +11,9 @@ function App() {
       {/* ----Landing Page----- */}
       <div className="welcome">
         <div className="wecoleText">
-          Hello, I'm <span className="inlineColor"> Jared Usher</span>.
-          <br />I am a <span className="inlineColor">software engineer</span>.
+          Hello, world! I'm <span className="inlineColor"> Jared Usher</span>.
+          <br />
+          I'm a <span className="inlineColor">software engineer</span>.
         </div>
       </div>
       <ParticleComponent />

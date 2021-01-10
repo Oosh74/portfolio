@@ -45,21 +45,33 @@ img {
   top: 0; /* Position the navbar at the top of the page */
   width: 100%;
   z-index: 9999; /* No content passes through navbar */
-  color: white;
 }
 
-.nav-bar a {
-  text-decoration: none !important;
-}
-
-.nav-links a {
+.nav-links button {
   font-family: 'Josefin Sans', sans-serif;
   display: inline-block;
   margin: 1em;
   text-transform: uppercase;
-  color: inherit !important;
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  /* text-decoration: none !important; */
+  cursor: pointer;
+  outline: none;
+  font-size: medium;
 }
 
+.nav-links button:hover {
+  color: #cf1259;
+}
+
+.active {
+  color: #cf1259;
+}
+
+.inactive {
+  color: white;
+}
 /* ----ABOUT----- */
 
 .aboutContainer {
