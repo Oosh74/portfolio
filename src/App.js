@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       {/* ----Landing Page----- */}
       <div className="welcome">
-        <div className="wecoleText">
+        <div className="wecolmeText">
           Hello, world! I'm <span className="inlineColor"> Jared Usher</span>.
           <br />
           I'm a <span className="inlineColor">software engineer</span>.

@@ -8,35 +8,22 @@ const Navbar = () => {
     cont: 'inactive',
   });
 
+  const ininitalState = {
+    home: 'inactive',
+    about: 'inactive',
+    port: 'inactive',
+    cont: 'inactive',
+  };
+
   const handleClick = (button, x, y) => {
     if (button === 1) {
-      setActive({
-        home: 'active',
-        about: 'inactive',
-        port: 'inactive',
-        cont: 'inactive',
-      });
+      setActive({ ...ininitalState, home: 'active' });
     } else if (button === 2) {
-      setActive({
-        home: 'inactive',
-        about: 'active',
-        port: 'inactive',
-        cont: 'inactive',
-      });
+      setActive({ ...ininitalState, about: 'active' });
     } else if (button === 3) {
-      setActive({
-        home: 'inactive',
-        about: 'inactive',
-        port: 'active',
-        cont: 'inactive',
-      });
+      setActive({ ...ininitalState, port: 'active' });
     } else if (button === 4) {
-      setActive({
-        home: 'inactive',
-        about: 'inactive',
-        port: 'inactive',
-        cont: 'active',
-      });
+      setActive({ ...ininitalState, cont: 'active' });
     }
 
     window.scrollTo({
