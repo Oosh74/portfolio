@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Navbar = () => {
   const [state, setActive] = useState({
@@ -7,6 +7,7 @@ const Navbar = () => {
     port: 'inactive',
     cont: 'inactive',
   });
+  const [buttonScroll, setButtonScroll] = useState(false);
 
   const ininitalState = {
     home: 'inactive',
@@ -16,8 +17,11 @@ const Navbar = () => {
   };
 
   const handleClick = (button, x, y) => {
-    if (button === 1) {
+    setButtonScroll(true);
+
+    if (button === 1 && home === 'inactive') {
       setActive({ ...ininitalState, home: 'active' });
+      console.log(home);
     } else if (button === 2) {
       setActive({ ...ininitalState, about: 'active' });
     } else if (button === 3) {
@@ -31,7 +35,53 @@ const Navbar = () => {
       left: y,
       behavior: 'smooth',
     });
+
+    setTimeout(function () {
+      setButtonScroll(false);
+    }, 750);
   };
+
+  const handleScroll = () => {
+    if (
+      window.scrollY >= 0 &&
+      window.scrollY <= 749 &&
+      home === 'inactive' &&
+      buttonScroll === false
+    ) {
+      console.log('REACHED!');
+      setActive({ ...ininitalState, home: 'active' });
+    } else if (
+      window.scrollY >= 750 &&
+      window.scrollY <= 1449 &&
+      about === 'inactive' &&
+      buttonScroll === false
+    ) {
+      console.log('REACHED!');
+      setActive({ ...ininitalState, about: 'active' });
+    } else if (
+      window.scrollY >= 1500 &&
+      window.scrollY < 1999 &&
+      port === 'inactive' &&
+      buttonScroll === false
+    ) {
+      console.log('REACHED!');
+      setActive({ ...ininitalState, port: 'active' });
+    } else if (
+      window.scrollY >= 2000 &&
+      cont === 'inactive' &&
+      buttonScroll === false
+    ) {
+      console.log('REACHED!');
+      setActive({ ...ininitalState, cont: 'active' });
+    }
+  };
+
+  useEffect(() => {
+    console.log('STATE ----', state);
+    console.log('BUTTON', buttonScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [state, buttonScroll]);
 
   const { home, about, port, cont } = state;
 
