@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react';
 import ParticleComponent from './particle-container';
 import Navbar from './navbar';
+import About from './about';
 
 function App() {
   return (
@@ -18,11 +19,13 @@ function App() {
       </div>
       <ParticleComponent />
       {/* ----About----- */}
-      <div className="aboutContainer"> ABOUT </div>
+      <About />
       {/* ----Portfolio----- */}
-      <div className="portfolioContainer"> PORTFOLIO </div>
+      <div className="portfolioContainer"> </div>
+      <h1 className="header"> PORTFOLIO</h1>
       {/* ----Contact/Footer----- */}
-      <div className="contactContainer"> CONTACT </div>
+      <div className="contactContainer"> </div>
+      <h1 className="header"> CONTACT </h1>
     </div>
   );
 }
