@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import _ from 'underscore';
 
 const Navbar = () => {
   const [state, setActive] = useState({
@@ -8,13 +9,22 @@ const Navbar = () => {
     cont: 'inactive',
   });
   const [buttonScroll, setButtonScroll] = useState(false);
-
   const ininitalState = {
     home: 'inactive',
     about: 'inactive',
     port: 'inactive',
     cont: 'inactive',
   };
+
+  useEffect(() => {
+    console.log('STATE ----', state);
+    console.log('BUTTON', buttonScroll);
+
+    const throttledCount = _.throttle(handleScroll, 100);
+    window.addEventListener('scroll', throttledCount, { passive: true });
+    return () =>
+      window.removeEventListener('scroll', throttledCount, { passive: true });
+  });
 
   const handleClick = (button, x, y) => {
     setButtonScroll(true);
@@ -44,14 +54,14 @@ const Navbar = () => {
   const handleScroll = () => {
     if (
       window.scrollY >= 0 &&
-      window.scrollY <= 749 &&
+      window.scrollY <= 649 &&
       home === 'inactive' &&
       buttonScroll === false
     ) {
       console.log('REACHED!');
       setActive({ ...ininitalState, home: 'active' });
     } else if (
-      window.scrollY >= 750 &&
+      window.scrollY >= 650 &&
       window.scrollY <= 1449 &&
       about === 'inactive' &&
       buttonScroll === false
@@ -75,14 +85,6 @@ const Navbar = () => {
       setActive({ ...ininitalState, cont: 'active' });
     }
   };
-
-  useEffect(() => {
-    console.log('STATE ----', state);
-    console.log('BUTTON', buttonScroll);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [state, buttonScroll]);
-
   const { home, about, port, cont } = state;
 
   return (
@@ -91,7 +93,7 @@ const Navbar = () => {
         <button className={home} onClick={() => handleClick(1, 0, 0)}>
           Home
         </button>
-        <button className={about} onClick={() => handleClick(2, 750, 0)}>
+        <button className={about} onClick={() => handleClick(2, 650, 0)}>
           About
         </button>
         <button className={port} onClick={() => handleClick(3, 1500, 0)}>

@@ -103,7 +103,7 @@ img {
 }
 
 .header {
-  padding-top: 2.5em;
+  padding-top: 1.5em;
   color: #b7c3f3;
   font-size: 50px;
   font-family: 'Josefin Sans', sans-serif;
@@ -118,6 +118,7 @@ img {
   margin-right: 2.5em;
   margin-left: 2.5em;
   font-family: 'Roboto', sans-serif;
+  text-align: left;
 }
 
 .imageGrid {
@@ -127,6 +128,8 @@ img {
   flex-wrap: wrap;
   flex-direction: row;
   margin-top: 2.5em;
+  background-color: #404e5c;
+  border-radius: 20;
 }
 
 .imageContainer {
@@ -143,6 +146,7 @@ img {
   justify-content: center;
   width: 100vw;
   height: 90vh;
+  background-color: whitesmoke;
 }
 /* ----CONTACT----- */
 
