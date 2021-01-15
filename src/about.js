@@ -10,13 +10,11 @@ function About() {
       <hr className="divider" />
       <div className="aboutContent">
         <div>
-          I am fullstack software engineer specializing in React, Node, Express,
-          and PostgreSQL. I am eager to explore new technologies and see where
-          my journey takes me. I started my professional career in recruitment
-          and sales, then found myself in working in the elevator industry. I
-          soon realized I wanted a career that combined the problem solving and
-          critical thinking aspect ofthe elevator industry with my love for
-          technology and computers, and allowed for creativity and expression.
+          I am fullstack software engineer from New Jersey. I specialize in
+          React, Node, Express, and PostgreSQL. I have a passion for web
+          development, learning, and solving unique problems using modern
+          technologies. I am always striving to improve and create high quality
+          projects.
         </div>
         <div className="imageGrid">
           <div className="imageContainer">
