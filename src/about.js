@@ -1,5 +1,3 @@
-import './App.css';
-import React from 'react';
 import socketLogo from './socketio_128x128.png';
 import reduxLogo from './redux.png';
 
