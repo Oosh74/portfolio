@@ -1,8 +1,10 @@
 import './App.css';
-import React from 'react';
 import ParticleComponent from './particle-container';
 import Navbar from './navbar';
 import About from './about';
+import Portfolio from './portfolio';
+import Contact from './contact';
+import Landing from './landing';
 
 function App() {
   return (
@@ -10,22 +12,14 @@ function App() {
       {/* ----Navbar----- */}
       <Navbar />
       {/* ----Landing Page----- */}
-      <div className="welcome">
-        <div className="wecolmeText">
-          Hello, world! I'm <span className="inlineColor"> Jared Usher</span>.
-          <br />
-          I'm a <span className="inlineColor">software engineer</span>.
-        </div>
-      </div>
+      <Landing />
       <ParticleComponent />
       {/* ----About----- */}
       <About />
       {/* ----Portfolio----- */}
-      <div className="portfolioContainer"> </div>
-      <h1 className="header"> PORTFOLIO</h1>
+      <Portfolio />
       {/* ----Contact/Footer----- */}
-      <div className="contactContainer"> </div>
-      <h1 className="header"> CONTACT </h1>
+      <Contact />
     </div>
   );
 }

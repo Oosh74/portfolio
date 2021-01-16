@@ -1,11 +1,9 @@
 import Particles from 'react-particles-js';
-import React from 'react';
 
 function ParticleComponent() {
   return (
-    <div>
+    <div className="particles-js">
       <Particles
-        className="particles-js"
         params={{
           particles: {
             number: {
