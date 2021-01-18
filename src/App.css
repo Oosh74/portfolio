@@ -56,6 +56,7 @@ img {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  background-color: #404e5c;
 }
 
 .buttonText {
@@ -81,7 +82,7 @@ img {
   transition: all 0.45s ease-Out;
 }
 
-#circle {
+#colorAnim {
   width: 0%;
   height: 0%;
   opacity: 0;
@@ -91,7 +92,7 @@ img {
   background-color: #cf1259;
 }
 
-#buttonAnim:hover #circle {
+#buttonAnim:hover #colorAnim {
   width: 200%;
   height: 500%;
   opacity: 1;
@@ -101,7 +102,6 @@ img {
 .nav-bar {
   display: flex;
   background-color: #404e5c;
-  /* padding-top: 5px; */
   height: 75px;
   justify-content: right;
   align-items: center;
@@ -146,8 +146,8 @@ img {
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
-  /* width: 100vw;
-  height: 90vh; */
+  width: 100vw;
+  height: 90vh;
 }
 
 .divider {
@@ -157,12 +157,6 @@ img {
   width: 150px;
   margin-bottom: 50px;
   background-color: #404e5c;
-  /* background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(60, 60, 60, 1) 50%,
-    rgba(255, 255, 255, 1) 100%
-  ); */
 }
 
 .header {
