@@ -1,4 +1,12 @@
 function Landing() {
+  const handleClick = () => {
+    window.scrollTo({
+      top: 625,
+      left: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div className="welcome">
       <div className="welcomeText">
@@ -7,8 +15,12 @@ function Landing() {
         <span className="subHeader"> Fullstack Software Engineer</span>.
       </div>
       <div className="welcomeButtonContainer">
-        <div class="welcomeButton" id="buttonAnim">
-          <div id="circle"></div>
+        <button
+          className="welcomeButton"
+          id="buttonAnim"
+          onClick={() => handleClick()}
+        >
+          <div id="colorAnim"></div>
           <div className="buttonText">See My Work</div>
           <img
             className="buttonArrow"
@@ -17,7 +29,7 @@ function Landing() {
             }
             alt="arrow"
           />
-        </div>
+        </button>
       </div>
     </div>
   );
