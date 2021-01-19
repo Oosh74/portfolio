@@ -4,15 +4,19 @@ import reduxLogo from './redux.png';
 function About() {
   return (
     <div className="aboutContainer">
-      <h1 className="header"> About </h1>
-      <hr className="divider" />
+      <div className="headerContainer">
+        <h1 className="header"> About </h1>
+      </div>
       <div className="aboutContent">
-        <div>
-          I am fullstack software engineer from New Jersey. I specialize in
-          React, Node, Express, and PostgreSQL. I have a passion for web
-          development, learning, and solving unique problems using modern
-          technologies. I am always striving to improve and create high quality
-          projects.
+        <div className="aboutTextCont">
+          <p className="aboutText">
+            I am fullstack software engineer from New Jersey {'\n'}specializing
+            in React, Node, Express, and PostgreSQL. {'\n'}I have a passion for
+            webdevelopment, learning, and solving{'\n'}unique problems using
+            modern technologies.{'\n'}I am always striving to improve and create
+            high quality projects!
+          </p>
+          {/* <div> PLACEHOLDER </div> */}
         </div>
         <div className="imageGrid">
           <div className="imageContainer">
