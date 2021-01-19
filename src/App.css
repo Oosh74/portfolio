@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
   margin: 0;
@@ -19,7 +21,7 @@ img {
 
 .subHeader {
   font-size: 25pt;
-  font-weight: lighter;
+  font-weight: 100;
 }
 
 .welcome {
@@ -29,6 +31,7 @@ img {
   justify-content: space-between;
   width: 100vw;
   height: 100vh;
+  font-weight: 400;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -37,7 +40,7 @@ img {
   font-size: 50px;
   line-height: 50px;
   padding-left: 1.5em;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .welcomeButtonContainer {
@@ -57,6 +60,7 @@ img {
   justify-content: center;
   overflow: hidden;
   background-color: #404e5c;
+  outline: none;
 }
 
 .buttonText {
@@ -122,14 +126,15 @@ img {
   text-transform: uppercase;
   background: none;
   border: none;
-  padding: 0 !important;
   cursor: pointer;
   outline: none;
   font-size: medium;
+  transition: all 0.45s ease-Out;
 }
 
 .nav-links button:hover {
   color: #cf1259;
+  transition: all 0.45s ease-in;
 }
 
 .active {
@@ -144,38 +149,53 @@ img {
 .aboutContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
+  align-items: flex-start;
+  justify-content: center;
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
+  margin-top: 20em;
 }
 
-.divider {
-  position: relative;
-  bottom: 15px;
-  height: 3px;
-  width: 150px;
-  margin-bottom: 50px;
-  background-color: #404e5c;
+.headerContainer {
+  padding-top: 1.5em;
+  padding-left: 5em;
 }
 
 .header {
-  padding-top: 1.5em;
   color: #b7c3f3;
   font-size: 50px;
   font-family: 'Josefin Sans', sans-serif;
   text-transform: uppercase;
+  border-bottom: 3px solid #404e5c;
+  padding-bottom: 7.5px;
+  font-weight: 600;
+  letter-spacing: 1.7px;
 }
 
 .aboutContent {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  margin-right: 2.5em;
-  margin-left: 2.5em;
-  font-family: 'Roboto', sans-serif;
+}
+
+.aboutTextCont {
+  display: flex;
+  align-content: flex-start;
+  justify-content: space-between;
+  margin-left: 6.5em;
+  margin-bottom: 5em;
+}
+
+.aboutText {
   text-align: left;
+  font-size: 20pt;
+  white-space: pre-line;
+  --text-opacity: 1;
+  color: #2d3748;
+  color: rgba(45, 55, 72, var(--text-opacity));
+  line-height: 1.5em;
+  letter-spacing: 0.5px;
+  font-family: 'Dosis', sans-serif;
 }
 
 .imageGrid {
@@ -184,17 +204,81 @@ img {
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-top: 2.5em;
-  background-color: #404e5c;
-  border-radius: 20;
+  background: #4f6272;
 }
 
 .imageContainer {
   display: flex;
+  padding: 1.5em;
+  opacity: 0.5;
+  transition: 0.45s ease-out;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.imageContainer img {
   height: 128px;
   width: 128px;
-  margin: 1.5em;
 }
+
+.imageContainer p {
+  display: flex;
+  opacity: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: black;
+  border: solid black transparent transparent transparent;
+  border-radius: 2.5px;
+  text-align: center;
+  padding: 5px;
+  color: white;
+  transition: 0.4s ease-in;
+}
+
+.imageContainer p::after {
+  content: ' ';
+  position: absolute;
+  top: 25.56%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.imageContainer:hover p {
+  opacity: 1;
+  transition: 0.4s ease-out;
+}
+
+.imageContainer:hover {
+  transform: scale(1.25);
+  opacity: 1;
+  transition: 0.45s ease-out;
+}
+
+.skillsHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 2.5em;
+  margin-top: 10em;
+}
+
+.skillsHeader h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+  border-bottom: 3px solid #404e5c;
+  letter-spacing: 1.7px;
+  color: #b7c3f3;
+  text-align: center;
+}
+.skillsArrow {
+  height: 150px;
+}
+
 /* ----PORTFOLIO----- */
 
 .portfolioContainer {
