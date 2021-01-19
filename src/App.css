@@ -126,7 +126,6 @@ img {
   text-transform: uppercase;
   background: none;
   border: none;
-  padding: 0 !important;
   cursor: pointer;
   outline: none;
   font-size: medium;
@@ -154,7 +153,7 @@ img {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  margin-top: 7.5em;
+  margin-top: 20em;
 }
 
 .headerContainer {
@@ -176,10 +175,7 @@ img {
 .aboutContent {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
-  /* margin-right: 2.5em;
-  margin-left: 2.5em; */
 }
 
 .aboutTextCont {
@@ -193,7 +189,6 @@ img {
 .aboutText {
   text-align: left;
   font-size: 20pt;
-  /* font-weight: 500; */
   white-space: pre-line;
   --text-opacity: 1;
   color: #2d3748;
@@ -209,17 +204,81 @@ img {
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-top: 2.5em;
   background: #4f6272;
-  border-radius: 20;
 }
 
 .imageContainer {
   display: flex;
+  padding: 1.5em;
+  opacity: 0.5;
+  transition: 0.45s ease-out;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.imageContainer img {
   height: 128px;
   width: 128px;
-  margin: 1.5em;
 }
+
+.imageContainer p {
+  display: flex;
+  opacity: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: black;
+  border: solid black transparent transparent transparent;
+  border-radius: 2.5px;
+  text-align: center;
+  padding: 5px;
+  color: white;
+  transition: 0.4s ease-in;
+}
+
+.imageContainer p::after {
+  content: ' ';
+  position: absolute;
+  top: 25.56%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.imageContainer:hover p {
+  opacity: 1;
+  transition: 0.4s ease-out;
+}
+
+.imageContainer:hover {
+  transform: scale(1.25);
+  opacity: 1;
+  transition: 0.45s ease-out;
+}
+
+.skillsHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 2.5em;
+  margin-top: 10em;
+}
+
+.skillsHeader h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+  border-bottom: 3px solid #404e5c;
+  letter-spacing: 1.7px;
+  color: #b7c3f3;
+  text-align: center;
+}
+.skillsArrow {
+  height: 150px;
+}
+
 /* ----PORTFOLIO----- */
 
 .portfolioContainer {
