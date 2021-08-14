@@ -304,7 +304,7 @@ img {
   align-items: center;
   width: 250px;
   height: 400px;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.2);
   background: #151515;
   color: white;
@@ -322,19 +322,21 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 30px;
-  width: 100px;
-  height: 100px;
+  margin-top: 15px;
+  height: 120px;
+  width: 120px;
   border-radius: 50%;
-  box-shadow: 0 0 0 5px #151515, inset 0 0 0 5px #151515,
-    inset 0 0 0 5px #151515, inset 0 0 0 5px #151515, inset 0 0 0 5px #151515;
+  /* box-shadow: 0 0 0 5px #151515, 0 0 0 5px #151515, 0 0 0 5px #151515,
+    0 0 0 5px #151515, 0 0 0 5px #151515; */
+  border: solid 10px #151515;
   background: white;
   z-index: 2;
-  object-fit: contain;
 }
 
 .cardProfile img {
-  width: auto;
+  width: 103%;
+  height: 103%;
+  object-fit: cover;
   border-radius: 50%;
 }
 
@@ -344,7 +346,7 @@ img {
   align-items: center;
   justify-content: center;
   flex-grow: 0;
-  height: 75px;
+  height: 70px;
   overflow: none;
 }
 
@@ -358,33 +360,41 @@ img {
   display: flex;
   width: 90%;
   flex-grow: 0;
-  height: 125px;
+  height: 120px;
   overflow: none;
 }
 
 .cardContent p {
-  font-size: 1.2rem;
+  font-size: 18px;
   font-family: 'Dosis', sans-serif;
   text-align: center;
+  opacity: 85%;
 }
 
 .cardBtnCont {
   display: flex;
   justify-content: space-evenly;
   width: 90%;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 .cardBtn {
-  display: flex;
-  align-items: center;
+  text-align: center;
   border-radius: 10px;
   border: none;
   font-size: 20px;
   font-weight: bold;
-  padding: 0.51rem;
+  padding: 0.5rem;
   background-color: #404e5c;
   color: white;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.45s ease-Out;
+}
+
+.cardBtn:hover {
+  background-color: crimson;
+  transition: all 0.45s ease-in;
 }
 
 /* ----CONTACT----- */
