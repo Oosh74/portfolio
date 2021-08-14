@@ -1,4 +1,12 @@
+import bookShopper from './bookshoppericon.png';
+import drawBit from './drawbiticon.png';
+import dataDash from './datadashicon.png';
+
 function Portfolio() {
+  const handleClick = (link) => {
+    window.open(link);
+  };
+
   return (
     <div className="portfolioContainer">
       <div className="headerContainer">
@@ -9,12 +17,7 @@ function Portfolio() {
         {/*CARD START*/}
         <div className="card">
           <div className="cardProfile">
-            <img
-              src={
-                'https://icongr.am/devicon/react-original.svg?size=75&color=000000'
-              }
-              alt="react"
-            />
+            <img src={bookShopper} alt="bookshopper" />
           </div>
           <div className="cardBanner"></div>
           <div className="cardTitle">
@@ -24,20 +27,29 @@ function Portfolio() {
             <p>A mock e-commerce website featuring books.</p>
           </div>
           <div className="cardBtnCont">
-            <button className="cardBtn">GitHub</button>
-            <button className="cardBtn">Project</button>
+            <button
+              className="cardBtn"
+              onClick={() =>
+                handleClick(
+                  'https://github.com/Crafty-Cranberries/Book-Shopper'
+                )
+              }
+            >
+              GitHub
+            </button>
+            <button
+              className="cardBtn"
+              onClick={() => handleClick('https://book-shopper.herokuapp.com/')}
+            >
+              Project
+            </button>
           </div>
         </div>
         {/*CARD END*/}
         {/*CARD START*/}
         <div className="card">
           <div className="cardProfile">
-            <img
-              src={
-                'https://icongr.am/devicon/react-original.svg?size=75&color=000000'
-              }
-              alt="react"
-            />
+            <img src={dataDash} alt="dataDash" />
           </div>
           <div className="cardBanner"></div>
           <div className="cardTitle">
@@ -50,20 +62,29 @@ function Portfolio() {
             </p>
           </div>
           <div className="cardBtnCont">
-            <button className="cardBtn">GitHub</button>
-            <button className="cardBtn">Project</button>
+            <button
+              className="cardBtn"
+              onClick={() =>
+                handleClick('https://github.com/Oosh74/Data_Dashboard')
+              }
+            >
+              GitHub
+            </button>
+            <button
+              className="cardBtn"
+              onClick={() =>
+                handleClick('https://visualdatadash.herokuapp.com/')
+              }
+            >
+              Project
+            </button>
           </div>
         </div>
         {/*CARD END*/}
         {/*CARD START*/}
         <div className="card">
           <div className="cardProfile">
-            <img
-              src={
-                'https://icongr.am/devicon/react-original.svg?size=75&color=000000'
-              }
-              alt="react"
-            />
+            <img src={drawBit} alt="drawBit" />
           </div>
           <div className="cardBanner"></div>
           <div className="cardTitle">
@@ -76,8 +97,20 @@ function Portfolio() {
             </p>
           </div>
           <div className="cardBtnCont">
-            <button className="cardBtn">GitHub</button>
-            <button className="cardBtn">Project</button>
+            <button
+              className="cardBtn"
+              onClick={() =>
+                handleClick('https://github.com/Metallic-Bees/DrawBit')
+              }
+            >
+              GitHub
+            </button>
+            <button
+              className="cardBtn"
+              onClick={() => handleClick('https://drawbit.herokuapp.com/')}
+            >
+              Project
+            </button>
           </div>
         </div>
         {/*CARD END*/}
