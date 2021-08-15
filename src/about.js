@@ -1,4 +1,4 @@
-import socketLogo from './socketio_128x128.png';
+import socketLogo from './socketio_transparent.png';
 import reduxLogo from './redux.png';
 
 function About() {
