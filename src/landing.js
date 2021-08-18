@@ -1,3 +1,5 @@
+import ParticleComponent from './particle-container';
+
 function Landing() {
   const handleClick = () => {
     window.scrollTo({
@@ -8,13 +10,16 @@ function Landing() {
   };
 
   return (
-    <div className="welcome">
-      <div className="welcomeText">
-        Hello, world! I'm <span className="inlineColor"> Jared Usher</span>.
-        <br />
-        <span className="subHeader"> Fullstack Software Engineer</span>.
+    <div className="welcomeContainer">
+      <div className="particlesWrapper">
+        <ParticleComponent />
       </div>
-      <div className="welcomeButtonContainer">
+      <div className="welcomeContent">
+        <div className="welcomeText">
+          Hello, world! I'm <span className="inlineColor"> Jared Usher</span>.
+          <br />
+          <span className="subHeader"> Fullstack Software Engineer</span>.
+        </div>
         <button
           className="welcomeButton"
           id="buttonAnim"
