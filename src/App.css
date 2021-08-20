@@ -4,17 +4,7 @@
 
 body {
   margin: 0;
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #434343,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #434343,
-    #000000
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: #12171c;
 }
 
 .wrapper {
@@ -35,7 +25,7 @@ body {
 }
 
 .inlineColor {
-  color: #cf1259;
+  color: #39ace7;
 }
 
 .subHeader {
@@ -59,12 +49,12 @@ body {
   font-family: 'Roboto', sans-serif;
   height: 50vh;
   width: 80vw;
-  background: rgba(61, 61, 61, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(2px);
+  background-color: #12171c;
+  box-shadow: 0 8px 32px 0 #1d2227;
+  backdrop-filter: blur(0.05px);
   -webkit-backdrop-filter: blur(2px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  /* border: 1px solid white; */
 }
 
 .welcomeText {
@@ -76,9 +66,8 @@ body {
 
 .welcomeButton {
   display: flex;
-  height: 85px;
-  width: 225px;
-  border: none;
+  height: 50px;
+  /* width: 225px; */
   color: white;
   text-transform: uppercase;
   font-size: 15pt;
@@ -86,9 +75,9 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: #404e5c;
-  outline: none;
-  border-radius: 25px;
+  background-color: #1d2227;
+  border-radius: 4px;
+  border: none;
 }
 
 .buttonText {
@@ -120,7 +109,7 @@ body {
   line-height: 40px;
   position: absolute;
   transition: all 0.5s ease-Out;
-  background-color: #cf1259;
+  background-color: #39ace7;
 }
 
 #buttonAnim:hover #colorAnim {
@@ -132,7 +121,7 @@ body {
 /* ----NAVBAR----- */
 .nav-bar {
   display: flex;
-  background-color: #212121;
+  background-color: #12171c;
   height: 75px;
   justify-content: right;
   align-items: center;
@@ -140,14 +129,15 @@ body {
   top: 0; /* Position the navbar at the top of the page */
   width: 100%;
   z-index: 9999; /* No content passes through navbar */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 .nav-links {
-  padding-left: 3em;
+  padding-left: 2.3em;
 }
 
 .nav-links button {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Dosis', sans-serif;
   display: inline-block;
   margin: 1.5em;
   text-transform: uppercase;
@@ -155,17 +145,18 @@ body {
   border: none;
   cursor: pointer;
   outline: none;
-  font-size: medium;
+  font-size: large;
   transition: all 0.45s ease-Out;
+  text-emphasis: bold;
 }
 
 .nav-links button:hover {
-  color: #cf1259;
+  color: #39ace7;
   transition: all 0.45s ease-in;
 }
 
 .active {
-  color: #cf1259;
+  color: #39ace7;
 }
 
 .inactive {
@@ -178,26 +169,36 @@ body {
   flex-direction: column;
   width: 90vw;
   height: 90vh;
-  background-color: #3d3d3d;
-  color: #b7c3f3;
-  border-radius: 25px;
+  color: white;
+  margin-top: 50px;
+  background: #1d2227;
+  border-radius: 4px;
+  box-shadow: 0px 30px 40px -20px black;
+  border-top: 1px solid white;
 }
 
 .headerContainer {
-  display: flex;
-  padding-top: 1.5em;
-  padding-left: 5em;
+  /* display: flex; */
+  align-items: flex-start;
+  justify-content: flex-start;
+  /* padding-top: 2em; */
+  /* padding-left: 5em; */
+  /* padding-bottom: 30em; */
+  width: 20%;
+  border-bottom: 1px solid rgba(100, 100, 100, 0.9);
 }
 
 .header {
-  color: white;
+  /* background-color: white; */
+  color: #292e32;
   font-size: 50px;
   font-family: 'Dosis', sans-serif;
   text-transform: uppercase;
-  border-bottom: 3px solid white;
-  padding-bottom: 7.5px;
+  /* border-top: 3px solid white; */
   font-weight: 600;
   letter-spacing: 1.7px;
+  background-color: white;
+  padding-left: 10px;
 }
 
 .aboutContent {
@@ -313,18 +314,19 @@ body {
   flex-direction: column;
   width: 90vw;
   height: 90vh;
-  background-color: #3d3d3d;
-  color: #b7c3f3;
-  border-radius: 25px;
+  color: white;
   margin-top: 50px;
+  background: #1d2227;
+  border-radius: 4px;
   box-shadow: 0px 30px 40px -20px black;
-  border-top: 3px solid red;
+  border-top: 1px solid white;
 }
 
 .cardContainer {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  margin-top: 25px;
 }
 
 .card {
@@ -333,18 +335,18 @@ body {
   align-items: center;
   width: 250px;
   height: 400px;
-  border-radius: 15px;
+  border-radius: 4px;
   /* box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.2); */
-  background: #151515;
+  background: #12171c;
   color: white;
 }
 
 .cardBanner {
   position: absolute;
   width: 250px;
-  height: 15%;
-  border-radius: 10px 10px 0px 0px;
-  background: crimson;
+  height: 10%;
+  border-radius: 4px 4px 0px 0px;
+  background: #39ace7;
 }
 
 .cardProfile {
@@ -355,7 +357,7 @@ body {
   height: 120px;
   width: 120px;
   border-radius: 50%;
-  border: solid 10px #151515;
+  border: solid 10px #12171c;
   background: white;
   z-index: 2;
 }
@@ -407,12 +409,12 @@ body {
 
 .cardBtn {
   text-align: center;
-  border-radius: 10px;
-  border: none;
+  border-radius: 4px;
+  border: 0.5px solid white;
   font-size: 20px;
   font-weight: bold;
   padding: 0.5rem;
-  background-color: #404e5c;
+  background-color: #12171c;
   color: white;
   cursor: pointer;
   outline: none;
@@ -420,7 +422,7 @@ body {
 }
 
 .cardBtn:hover {
-  background-color: crimson;
+  background-color: #39ace7;
   transition: all 0.45s ease-in;
 }
 
@@ -431,16 +433,12 @@ body {
   flex-direction: column;
   width: 90vw;
   height: 90vh;
-  /* background-color: #3d3d3d; */
   color: white;
-  border-radius: 25px;
   margin-top: 50px;
-  background: #212121;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  border-radius: 20px;
+  background: #1d2227;
+  border-radius: 4px;
   box-shadow: 0px 30px 40px -20px black;
-  border-top: 3px solid blue;
+  border-top: 1px solid white;
 }
 
 .contactSubCntr {
@@ -479,19 +477,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: none;
+  border: 0.5px solid rgba(100, 100, 100, 0.75);
   background: none;
   cursor: pointer;
   outline: none;
   margin: 1.5em;
   margin-top: 8.5em;
   color: white;
+  border-radius: 4px;
+  transition: all 0.45s ease-out;
 }
 
 .contactBtnText {
   font-family: 'Dosis', sans-serif;
   display: inline-block;
-  /* margin: 1.5em; */
   text-transform: uppercase;
   font-size: medium;
   transition: all 0.45s ease-Out;
@@ -509,6 +508,11 @@ body {
 .contactImgCntr img {
   height: 56px;
   width: 56px;
+}
+
+.contactBtn:hover {
+  background-color: #39ace7;
+  transition: all 0.45s ease-in;
 }
 
 .socailsBtnCntr button {
