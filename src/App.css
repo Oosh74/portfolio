@@ -14,6 +14,29 @@ body {
   justify-content: space-around;
 }
 
+.headerContainer {
+  /* display: flex; */
+  align-items: flex-start;
+  justify-content: flex-start;
+  /* padding-top: 2em; */
+  /* padding-left: 5em; */
+  /* padding-bottom: 30em; */
+  width: 20%;
+  border-bottom: 1px solid rgba(100, 100, 100, 0.9);
+}
+
+.header {
+  /* background-color: white; */
+  color: #292e32;
+  font-size: 50px;
+  font-family: 'Dosis', sans-serif;
+  text-transform: uppercase;
+  /* border-top: 3px solid white; */
+  font-weight: 600;
+  letter-spacing: 1.7px;
+  background-color: white;
+  padding-left: 10px;
+}
 /* ----LANDING----- */
 
 .particlesWrapper {
@@ -128,7 +151,7 @@ body {
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%;
-  z-index: 9999; /* No content passes through navbar */
+  z-index: 9998; /* No content passes through navbar */
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -177,42 +200,19 @@ body {
   border-top: 1px solid white;
 }
 
-.headerContainer {
-  /* display: flex; */
-  align-items: flex-start;
-  justify-content: flex-start;
-  /* padding-top: 2em; */
-  /* padding-left: 5em; */
-  /* padding-bottom: 30em; */
-  width: 20%;
-  border-bottom: 1px solid rgba(100, 100, 100, 0.9);
-}
-
-.header {
-  /* background-color: white; */
-  color: #292e32;
-  font-size: 50px;
-  font-family: 'Dosis', sans-serif;
-  text-transform: uppercase;
-  /* border-top: 3px solid white; */
-  font-weight: 600;
-  letter-spacing: 1.7px;
-  background-color: white;
-  padding-left: 10px;
-}
-
 .aboutContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
-.aboutTextCont {
+/* .aboutTextCont {
   display: flex;
   align-content: flex-start;
   justify-content: space-between;
   margin-left: 6.5em;
-}
+} */
 
 .aboutText {
   text-align: left;
@@ -223,20 +223,46 @@ body {
   opacity: 80%;
   line-height: 1.5em;
   letter-spacing: 0.5px;
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Roboto';
+}
+.aboutBtn {
+  text-align: center;
+  border-radius: 4px;
+  border: 0.5px solid white;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0.5rem;
+  background-color: #12171c;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.45s ease-Out;
+  font-family: 'Roboto';
+  letter-spacing: 1.5px;
+  width: 30%;
+  margin-top: 1em;
 }
 
+.aboutBtn:hover {
+  background-color: #39ace7;
+  transition: all 0.45s ease-in;
+}
 .imageGrid {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
-  background: #4f6272;
+  background: #1d2227;
+  margin-top: 1em;
+  border-top: 1px solid white;
+
+  border-radius: 4px;
 }
 
 .imageContainer {
   display: flex;
+  flex-direction: column;
   padding: 1.5em;
   opacity: 0.5;
   transition: 0.45s ease-out;
@@ -244,6 +270,8 @@ body {
   align-items: center;
   justify-content: center;
   padding-bottom: 50px;
+  margin-top: -2em;
+  margin-bottom: -2em;
 }
 
 .imageContainer img {
@@ -252,12 +280,12 @@ body {
 }
 
 .imageContainer p {
-  display: flex;
+  /* display: flex; */
   opacity: 0;
   font-family: 'Josefin Sans', sans-serif;
   background-color: black;
-  border: solid black transparent transparent transparent;
-  border-radius: 2.5px;
+  /* border: solid black transparent transparent transparent; */
+  border-radius: 4px;
   text-align: center;
   padding: 5px;
   color: white;
@@ -281,30 +309,25 @@ body {
 }
 
 .imageContainer:hover {
-  transform: scale(1.25);
+  transform: scale(1.1);
   opacity: 1;
   transition: 0.45s ease-out;
 }
 
-.skillsHeader {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-right: 2.5em;
-  margin-top: 10em;
+.ReactModal__Overlay {
+  opacity: 0;
+  /* transform: translateX(-100px); */
+  transition: all 0.45s ease-in-out;
 }
 
-.skillsHeader h1 {
-  font-family: 'Josefin Sans', sans-serif;
-  text-transform: uppercase;
-  border-bottom: 3px solid #404e5c;
-  letter-spacing: 1.7px;
-  color: white;
-  text-align: center;
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+  /* transform: translateX(0px); */
 }
-.skillsArrow {
-  height: 150px;
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+  /* transform: translateX(-100px); */
 }
 
 /* ----PORTFOLIO----- */
@@ -380,7 +403,7 @@ body {
 }
 
 .cardTitle h1 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Roboto';
   font-weight: bold;
   font-size: 35px;
 }
@@ -419,6 +442,7 @@ body {
   cursor: pointer;
   outline: none;
   transition: all 0.45s ease-Out;
+  font-family: 'Roboto';
 }
 
 .cardBtn:hover {
@@ -432,13 +456,14 @@ body {
   display: flex;
   flex-direction: column;
   width: 90vw;
-  height: 90vh;
+  height: 100vh;
   color: white;
   margin-top: 50px;
   background: #1d2227;
   border-radius: 4px;
   box-shadow: 0px 30px 40px -20px black;
   border-top: 1px solid white;
+  margin-bottom: 1em;
 }
 
 .contactSubCntr {
@@ -451,18 +476,17 @@ body {
   text-align: center;
   font-size: 20pt;
   white-space: pre-line;
-  /* --text-opacity: 1; */
   color: white;
-  /* color: rgba(45, 55, 72, var(--text-opacity)); */
   line-height: 1.5em;
   letter-spacing: 0.5px;
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Roboto';
 }
 
 .emailBtnCntr {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  margin-top: -1em;
 }
 
 .socailsBtnCntr {
@@ -471,6 +495,7 @@ body {
   justify-content: space-evenly;
   margin-left: 20em;
   margin-right: 20em;
+  margin-top: -1em;
 }
 
 .contactBtn {
