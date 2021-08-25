@@ -4,16 +4,6 @@ import reduxLogo from './redux.png';
 function Skills() {
   return (
     <div className="skillsContainer">
-      <div className="skillsHeader">
-        <h1> Skills </h1>
-        <img
-          src={
-            'https://icongr.am/octicons/arrow-down.svg?size=100&color=4f6290'
-          }
-          alt="downarrow"
-          className="skillsArrow"
-        />
-      </div>
       <div className="imageGrid">
         <div className="imageContainer">
           <p> JavaScript </p>

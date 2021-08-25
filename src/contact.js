@@ -15,7 +15,8 @@ function Contact() {
       <div className="contactSubCntr">
         <p className="contactSubText">
           Feel free to reach out if you are interested in working together,
-          {'\n'} have any questions, or just want to connect.
+          {'\n'} have any questions, or just want to connect. {'\n'} I am
+          currently seeking new opportunities.
         </p>
       </div>
       <div className="emailBtnCntr">
