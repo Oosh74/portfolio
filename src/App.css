@@ -32,7 +32,7 @@ body {
   font-family: 'Dosis', sans-serif;
   text-transform: uppercase;
   /* border-top: 3px solid white; */
-  font-weight: 600;
+  /* font-weight: 200; */
   letter-spacing: 1.7px;
   background-color: white;
   padding-left: 10px;
@@ -52,8 +52,9 @@ body {
 }
 
 .subHeader {
-  font-size: 25pt;
-  font-weight: 100;
+  font-size: 23pt;
+  opacity: 85%;
+  font-family: 'Roboto';
 }
 
 .welcomeContainer {
@@ -74,10 +75,9 @@ body {
   width: 80vw;
   background-color: #12171c;
   box-shadow: 0 8px 32px 0 #1d2227;
-  backdrop-filter: blur(0.05px);
-  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(40px);
   border-radius: 10px;
-  /* border: 1px solid white; */
+  border: 1px solid white;
 }
 
 .welcomeText {
@@ -90,7 +90,6 @@ body {
 .welcomeButton {
   display: flex;
   height: 50px;
-  /* width: 225px; */
   color: white;
   text-transform: uppercase;
   font-size: 15pt;
@@ -111,7 +110,6 @@ body {
   height: 25px;
   width: 50px;
   position: relative;
-  transition: all 0.45s ease-Out;
 }
 
 #buttonAnim {
@@ -122,7 +120,6 @@ body {
 
 #buttonAnim .buttonText {
   position: relative;
-  transition: all 0.45s ease-Out;
 }
 
 #colorAnim {
@@ -131,7 +128,7 @@ body {
   opacity: 0;
   line-height: 40px;
   position: absolute;
-  transition: all 0.5s ease-Out;
+  transition: all 0.75s ease-Out;
   background-color: #39ace7;
 }
 
@@ -207,30 +204,40 @@ body {
   align-items: center;
 }
 
-/* .aboutTextCont {
-  display: flex;
-  align-content: flex-start;
-  justify-content: space-between;
-  margin-left: 6.5em;
-} */
-
-.aboutText {
-  text-align: left;
-  font-size: 20pt;
-  white-space: pre-line;
-  --text-opacity: 1;
+.aboutConHead {
+  text-align: center;
+  font-size: 24pt;
   color: white;
-  opacity: 80%;
   line-height: 1.5em;
   letter-spacing: 0.5px;
   font-family: 'Roboto';
+  font-weight: bold;
 }
-.aboutBtn {
+
+.aboutConBody {
   text-align: center;
+  font-size: 16pt;
+  color: white;
+  opacity: 85%;
+  letter-spacing: 0.5px;
+  font-family: 'Roboto';
+  width: 70%;
+  line-height: 1.7;
+  font-weight: lighter;
+}
+
+.aboutConFoot {
+  text-align: center;
+  font-size: 20pt;
+  color: white;
+  letter-spacing: 0.5px;
+  font-family: 'Roboto';
+  font-weight: bold;
+}
+
+.aboutBtn {
   border-radius: 4px;
   border: 0.5px solid white;
-  font-size: 30px;
-  font-weight: bold;
   padding: 0.5rem;
   background-color: #12171c;
   color: white;
@@ -238,9 +245,12 @@ body {
   outline: none;
   transition: all 0.45s ease-Out;
   font-family: 'Roboto';
-  letter-spacing: 1.5px;
   width: 30%;
-  margin-top: 1em;
+}
+
+.aboutBtn img {
+  height: 52px;
+  height: 64;
 }
 
 .aboutBtn:hover {
@@ -263,31 +273,29 @@ body {
 .imageContainer {
   display: flex;
   flex-direction: column;
-  padding: 1.5em;
+  padding: 1em;
   opacity: 0.5;
   transition: 0.45s ease-out;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-bottom: 50px;
-  margin-top: -2em;
+  /* margin-top: -2em; */
   margin-bottom: -2em;
 }
 
 .imageContainer img {
-  height: 128px;
-  width: 128px;
+  height: 112px;
+  width: 112px;
 }
 
 .imageContainer p {
-  /* display: flex; */
   opacity: 0;
   font-family: 'Josefin Sans', sans-serif;
   background-color: black;
-  /* border: solid black transparent transparent transparent; */
   border-radius: 4px;
   text-align: center;
-  padding: 5px;
+  padding: 4px;
   color: white;
   transition: 0.45s ease-in;
 }
@@ -295,7 +303,7 @@ body {
 .imageContainer p::after {
   content: ' ';
   position: absolute;
-  top: 25.56%;
+  top: 24%;
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
@@ -316,18 +324,42 @@ body {
 
 .ReactModal__Overlay {
   opacity: 0;
-  /* transform: translateX(-100px); */
   transition: all 0.45s ease-in-out;
 }
 
 .ReactModal__Overlay--after-open {
   opacity: 1;
-  /* transform: translateX(0px); */
 }
 
 .ReactModal__Overlay--before-close {
   opacity: 0;
-  /* transform: translateX(-100px); */
+}
+
+.modalClose {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.modalClose button {
+  background-color: #39ace7;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: ease-in 0.45s;
+}
+
+.modalClose button img {
+  /* height: 30px; */
+  width: 20px;
+  padding: 0.02em;
+  padding-top: 0.2em;
+}
+
+.modalClose button:hover {
+  background-color: white;
+  transition: ease-out 0.45s;
 }
 
 /* ----PORTFOLIO----- */
@@ -466,18 +498,12 @@ body {
   margin-bottom: 1em;
 }
 
-.contactSubCntr {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.contactSubText {
+.contactContainer p {
   text-align: center;
   font-size: 20pt;
   white-space: pre-line;
   color: white;
-  line-height: 1.5em;
+  line-height: 1.5;
   letter-spacing: 0.5px;
   font-family: 'Roboto';
 }
@@ -506,8 +532,7 @@ body {
   background: none;
   cursor: pointer;
   outline: none;
-  margin: 1.5em;
-  margin-top: 8.5em;
+  margin-top: 7em;
   color: white;
   border-radius: 4px;
   transition: all 0.45s ease-out;
@@ -515,24 +540,20 @@ body {
 
 .contactBtnText {
   font-family: 'Dosis', sans-serif;
-  display: inline-block;
   text-transform: uppercase;
-  font-size: medium;
   transition: all 0.45s ease-Out;
   color: white;
-  font-size: 30pt;
-  font-weight: bold;
-  margin-right: 20px;
+  font-size: 24pt;
+  margin-right: 0.5em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+  padding-left: 0.5em;
 }
 
-.contactBtnIcon {
-  height: 40px;
-  width: 40px;
-}
-
-.contactImgCntr img {
-  height: 56px;
-  width: 56px;
+.contactBtn img {
+  height: 64px;
+  width: 64px;
+  padding-right: 0.5em;
 }
 
 .contactBtn:hover {
@@ -551,4 +572,9 @@ body {
 .socailsBtnCntr button:hover {
   transform: scale(1.25);
   transition: 0.45s ease-out;
+}
+
+.socailsBtnCntr img {
+  height: 56px;
+  width: 56px;
 }
