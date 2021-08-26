@@ -37,20 +37,27 @@ function About() {
         <h1 className="header"> About </h1>
       </div>
       <div className="aboutContent">
-        <p className="aboutText">
-          I am fullstack software engineer from New Jersey {'\n'}specializing in
-          React, Node, Express, and PostgreSQL. {'\n'}I have a passion for web
-          development, learning, and solving{'\n'}unique problems using modern
-          technologies.{'\n'}I am always striving to improve and create high
-          quality projects!
+        <p className="aboutConHead">
+          I am fullstack software engineer from New Jersey.
         </p>
+        <p className="aboutConBody">
+          My specialization is web development utilizing React, Node, Express,
+          and PostgreSQL. I enjoy breaking complex problems down into simple
+          solutions, and delivering elegant front end experiences. I am always
+          striving to improve, learn, and deliver professional code. While I'm
+          not coding, I enjoy playing video games, being active, and reading.
+        </p>
+        <p className="aboutConFoot">Check out the technologies I work with:</p>
         <button
           className="aboutBtn"
           onClick={() => {
             setModalIsOpenToTrue();
           }}
         >
-          Skills
+          <img
+            src="https://icongr.am/fontawesome/code.svg?size=128&color=ffffff"
+            alt="skillsButton"
+          />
         </button>
       </div>
       <Modal
@@ -64,7 +71,14 @@ function About() {
           Note: It is not called if isOpen is changed by other means. */
         }
       >
-        <button onClick={setModalIsOpenToFalse}>x</button>
+        <div className="modalClose">
+          <button onClick={setModalIsOpenToFalse}>
+            <img
+              src={'https://icongr.am/clarity/close.svg?size=128&color=1d2227'}
+              alt="close"
+            />
+          </button>
+        </div>
         <Skills />
       </Modal>
     </div>
