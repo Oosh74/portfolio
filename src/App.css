@@ -65,7 +65,7 @@ body {
 
 .subHeader {
   font-size: 23pt;
-  opacity: 85%;
+  opacity: 0.65;
   font-family: 'Roboto';
 }
 
@@ -230,7 +230,7 @@ body {
   text-align: center;
   font-size: 16pt;
   color: white;
-  opacity: 85%;
+  opacity: 0.85;
   letter-spacing: 0.5px;
   font-family: 'Roboto';
   width: 70%;
@@ -461,7 +461,7 @@ body {
   font-size: 18px;
   font-family: 'Dosis', sans-serif;
   text-align: center;
-  opacity: 85%;
+  opacity: 0.85;
 }
 
 .cardBtnCont {

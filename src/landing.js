@@ -18,7 +18,7 @@ function Landing() {
         <div className="welcomeText">
           Hi there! I'm <span className="inlineColor"> Jared Usher</span>.
           <br />
-          <span className="subHeader"> Fullstack Software Engineer</span>.
+          <span className="subHeader"> Full stack Software Engineer</span>.
         </div>
         <button
           className="welcomeButton"
