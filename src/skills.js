@@ -1,5 +1,5 @@
-import socketLogo from './socketio_transparent.png';
-import reduxLogo from './redux.png';
+import socketLogo from './images/socketio_transparent.png';
+import reduxLogo from './images/redux.png';
 
 function Skills() {
   return (

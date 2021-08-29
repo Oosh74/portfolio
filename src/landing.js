@@ -3,7 +3,7 @@ import ParticleComponent from './particle-container';
 function Landing() {
   const handleClick = () => {
     window.scrollTo({
-      top: 625,
+      top: 1329,
       left: 0,
       behavior: 'smooth',
     });

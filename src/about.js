@@ -9,7 +9,6 @@ function About() {
     setModalIsOpen(true);
     console.log(modalState);
   };
-
   const setModalIsOpenToFalse = () => {
     setModalIsOpen(false);
   };
@@ -64,12 +63,7 @@ function About() {
         isOpen={modalState}
         style={customStyles}
         closeTimeoutMS={500}
-        onRequestClose={
-          setModalIsOpenToFalse
-          /* Function that will be run when the modal is requested
-          to be closed (either by clicking on overlay or pressing ESC).
-          Note: It is not called if isOpen is changed by other means. */
-        }
+        onRequestClose={setModalIsOpenToFalse}
       >
         <div className="modalClose">
           <button onClick={setModalIsOpenToFalse}>
