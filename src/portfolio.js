@@ -1,6 +1,6 @@
-import bookShopper from './bookshoppericon.png';
-import drawBit from './drawbiticon.png';
-import dataDash from './datadashicon.png';
+import bookShopper from './images/bookshoppericon.png';
+import drawBit from './images/drawbiticon.png';
+import dataDash from './images/datadashicon.png';
 
 function Portfolio() {
   const handleClick = (link) => {

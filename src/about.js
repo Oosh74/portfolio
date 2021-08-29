@@ -9,7 +9,6 @@ function About() {
     setModalIsOpen(true);
     console.log(modalState);
   };
-
   const setModalIsOpenToFalse = () => {
     setModalIsOpen(false);
   };
@@ -41,11 +40,11 @@ function About() {
           I am fullstack software engineer from New Jersey.
         </p>
         <p className="aboutConBody">
-          My specialization is web development utilizing React, Node, Express,
-          and PostgreSQL. I enjoy breaking complex problems down into simple
+          I specialize in web development utilizing React, Node, Express, and
+          PostgreSQL. I enjoy breaking complex problems down into simple
           solutions, and delivering elegant front end experiences. I am always
-          striving to improve, learn, and deliver professional code. While I'm
-          not coding, I enjoy playing video games, being active, and reading.
+          striving to improve, learn, and write professional code. While I'm not
+          coding, I enjoy playing video games, being active, and reading.
         </p>
         <p className="aboutConFoot">Check out the technologies I work with:</p>
         <button
@@ -64,12 +63,7 @@ function About() {
         isOpen={modalState}
         style={customStyles}
         closeTimeoutMS={500}
-        onRequestClose={
-          setModalIsOpenToFalse
-          /* Function that will be run when the modal is requested
-          to be closed (either by clicking on overlay or pressing ESC).
-          Note: It is not called if isOpen is changed by other means. */
-        }
+        onRequestClose={setModalIsOpenToFalse}
       >
         <div className="modalClose">
           <button onClick={setModalIsOpenToFalse}>
