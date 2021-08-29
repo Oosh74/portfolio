@@ -37,7 +37,7 @@ function About() {
       </div>
       <div className="aboutContent">
         <p className="aboutConHead">
-          I am fullstack software engineer from New Jersey.
+          I am a full stack software engineer from New Jersey.
         </p>
         <p className="aboutConBody">
           I specialize in web development utilizing React, Node, Express, and
