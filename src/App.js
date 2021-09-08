@@ -4,20 +4,42 @@ import About from './about';
 import Portfolio from './portfolio';
 import Contact from './contact';
 import Landing from './landing';
+import { useRef } from 'react';
 
 function App() {
+  const headerRef = useRef(null);
+  const landingRef = useRef(null);
+  const aboutRef = useRef(null);
+  const portfolioRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const sectionRefs = [
+    { section: 'Landing', ref: landingRef },
+    { section: 'About', ref: aboutRef },
+    { section: 'Portfolio', ref: portfolioRef },
+    { section: 'Contact', ref: contactRef },
+  ];
+
   return (
     <div className="wrapper">
       {/* ----Navbar----- */}
-      <Navbar />
+      <Navbar props={sectionRefs} headerProp={headerRef} />
       {/* ----Landing Page----- */}
-      <Landing />
+      <div ref={landingRef}>
+        <Landing />
+      </div>
       {/* ----About----- */}
-      <About />
+      <div ref={aboutRef}>
+        <About />
+      </div>
       {/* ----Portfolio----- */}
-      <Portfolio />
+      <div ref={portfolioRef}>
+        <Portfolio />
+      </div>
       {/* ----Contact/Footer----- */}
-      <Contact />
+      <div ref={contactRef}>
+        <Contact />
+      </div>
     </div>
   );
 }

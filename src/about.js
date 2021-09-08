@@ -2,7 +2,7 @@ import Skills from './skills';
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 
-function About() {
+function About({ isVisible }) {
   const [modalState, setModalIsOpen] = useState(false);
 
   const setModalIsOpenToTrue = () => {
