@@ -168,7 +168,12 @@ body {
   padding-left: 2.3em;
 }
 
+.selected {
+  color: #39ace7 !important;
+}
+
 .nav-links button {
+  color: white;
   font-family: 'Dosis', sans-serif;
   display: inline-block;
   margin: 1.5em;
@@ -187,13 +192,6 @@ body {
   transition: all 0.45s ease-in;
 }
 
-.active {
-  color: #39ace7;
-}
-
-.inactive {
-  color: white;
-}
 /* ----ABOUT----- */
 
 .aboutContainer {
@@ -278,7 +276,6 @@ body {
   background: #1d2227;
   margin-top: 1em;
   border-top: 1px solid white;
-
   border-radius: 4px;
 }
 
@@ -587,7 +584,7 @@ body {
   width: 56px;
 }
 
-/* Tabels and under */
+/* Tablets and under */
 @media (max-width: 768px) {
 }
 
@@ -607,7 +604,7 @@ body {
   }
 
   .nav-bar {
-    height: 110px;
+    height: 95px;
   }
 
   .nav-links button {
