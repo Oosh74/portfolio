@@ -1,11 +1,10 @@
 import ParticleComponent from './particle-container';
 
-function Landing() {
-  const handleClick = () => {
-    window.scrollTo({
-      top: 1329,
-      left: 0,
+function Landing(props) {
+  const scrollTo = () => {
+    props.portfolioProp.current.scrollIntoView({
       behavior: 'smooth',
+      block: 'start',
     });
   };
 
@@ -23,7 +22,7 @@ function Landing() {
         <button
           className="welcomeButton"
           id="buttonAnim"
-          onClick={() => handleClick()}
+          onClick={() => scrollTo()}
         >
           <div id="colorAnim"></div>
           <div className="buttonText">See My Work</div>
