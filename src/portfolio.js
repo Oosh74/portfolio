@@ -57,8 +57,8 @@ function Portfolio() {
           </div>
           <div className="cardContent">
             <p>
-              A data dashboard that allows the user to retrieve and visual a
-              data set.
+              A data dashboard that allows users to retrieve and visualize a
+              data set. <b>Under Construction.</b>
             </p>
           </div>
           <div className="cardBtnCont">
