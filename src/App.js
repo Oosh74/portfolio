@@ -26,7 +26,7 @@ function App() {
       <Navbar props={sectionRefs} headerProp={headerRef} />
       {/* ----Landing Page----- */}
       <div ref={landingRef}>
-        <Landing />
+        <Landing portfolioProp={portfolioRef} />
       </div>
       {/* ----About----- */}
       <div ref={aboutRef}>
