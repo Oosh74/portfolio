@@ -29,7 +29,11 @@ function Contact() {
         </button>
       </div>
       <div className="socailsBtnCntr">
-        <button onClick={() => handleClick('https://twitter.com/j_ushr')}>
+        <button
+          data-tooltip="Twitter"
+          className="socialBtn"
+          onClick={() => handleClick('https://twitter.com/j_ushr')}
+        >
           <img
             src={
               'https://icongr.am/devicon/twitter-original.svg?size=128&color=currentColor'
@@ -37,13 +41,20 @@ function Contact() {
             alt="twitter"
           />
         </button>
-        <button onClick={() => handleClick('https://github.com/Oosh74')}>
+        <button
+          className="socialBtn"
+          onClick={() => handleClick('https://github.com/Oosh74')}
+          data-tooltip="Github"
+        >
           <img
+            className="socialsImg"
             src={'https://icongr.am/feather/github.svg?size=128&color=ffffff'}
             alt="gitHub"
           />
         </button>
         <button
+          data-tooltip="LinkedIn"
+          className="socialBtn"
           onClick={() => handleClick('https://www.linkedin.com/in/jaredusher/')}
         >
           <img

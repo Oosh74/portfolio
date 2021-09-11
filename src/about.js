@@ -43,7 +43,7 @@ function About({ isVisible }) {
           I specialize in web development utilizing React, Node, Express, and
           PostgreSQL. I enjoy breaking complex problems down into simple
           solutions, and delivering elegant front end experiences. I am always
-          striving to improve, learn, and write professional code. While I'm not
+          striving to improve, learn, and write professional code. When I'm not
           coding, I enjoy playing video games, being active, and reading.
         </p>
         <p className="aboutConFoot">Check out the technologies I work with:</p>

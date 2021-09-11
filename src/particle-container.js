@@ -4,6 +4,7 @@ function ParticleComponent() {
   return (
     <Particles
       params={{
+        fps_limit: 30,
         particles: {
           number: {
             value: 60,
@@ -34,8 +35,7 @@ function ParticleComponent() {
         interactivity: {
           events: {
             onclick: {
-              enable: true,
-              mode: 'push',
+              enable: false,
             },
           },
           modes: {
