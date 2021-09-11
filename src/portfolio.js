@@ -12,7 +12,6 @@ function Portfolio() {
       <div className="headerContainer">
         <h1 className="header"> PORTFOLIO </h1>
       </div>
-      {/*CARD START*/}
       <div className="cardContainer">
         {/*CARD START*/}
         <div className="card">

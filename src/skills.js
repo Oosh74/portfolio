@@ -25,7 +25,6 @@ function Skills() {
         </div>
         <div className="imageContainer">
           <p> Express </p>
-
           <img
             src={
               'https://icongr.am/devicon/express-original-wordmark.svg?size=75&color=000000'
