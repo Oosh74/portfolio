@@ -1,9 +1,11 @@
+import mastLogo from './images/mastodon-logo-scaled.png';
+
 function Contact() {
   const handleClick = (link) => {
     if (link) {
       window.open(link);
     } else {
-      window.location = 'mailto:usherjared@yahoo.com';
+      window.location = 'mailto:jaredusher.dev@gmail.com';
     }
   };
 
@@ -19,7 +21,7 @@ function Contact() {
       </p>
       <div className="emailBtnCntr">
         <button className="contactBtn" onClick={() => handleClick()}>
-          <div className="contactBtnText"> usherjared@yahoo.com </div>
+          <div className="contactBtnText"> jaredusher.dev@gmail.com </div>
           <img
             src={
               'https://icongr.am/octicons/mail.svg?size=25&color=currentColor'
@@ -30,16 +32,11 @@ function Contact() {
       </div>
       <div className="socailsBtnCntr">
         <button
-          data-tooltip="Twitter"
+          data-tooltip="Mastadon"
           className="socialBtn"
-          onClick={() => handleClick('https://twitter.com/j_ushr')}
+          onClick={() => handleClick('https://mastodon.social/@jusher')}
         >
-          <img
-            src={
-              'https://icongr.am/devicon/twitter-original.svg?size=128&color=currentColor'
-            }
-            alt="twitter"
-          />
+          <img src={mastLogo} alt="twitter" />
         </button>
         <button
           className="socialBtn"
