@@ -53,12 +53,12 @@ body {
 
 /* ----LANDING----- */
 
-.particlesWrapper {
+/* .particlesWrapper {
   height: 100vh;
   width: 100vw;
   position: absolute !important;
   z-index: -1;
-}
+} */
 
 .inlineColor {
   color: #39ace7;
@@ -75,8 +75,15 @@ body {
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
+  height: 95vh;
   font-family: 'Roboto', sans-serif;
+}
+
+.welcomeContainer {
+  background-image: url('/src/images/starmap-background\ \(1).webp');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .welcomeContent {

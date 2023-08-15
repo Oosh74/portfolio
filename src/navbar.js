@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const Navbar = (props, headerProp) => {
+const Navbar = ({ headerProp, ...props }) => {
   const headerRef = useRef(null);
   const [visibleSection, setVisibleSection] = useState();
 
@@ -33,6 +33,7 @@ const Navbar = (props, headerProp) => {
           const { offsetBottom, offsetTop } = getDimensions(ele);
           return scrollPosition > offsetTop && scrollPosition < offsetBottom;
         }
+        return false;
       });
 
       if (selected && selected.section !== visibleSection) {
@@ -47,7 +48,7 @@ const Navbar = (props, headerProp) => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [visibleSection]);
+  }, [visibleSection, props.props]); // Add 'props.props' to the dependency array
 
   return (
     <div className="nav-bar" ref={headerRef}>

@@ -1,4 +1,4 @@
-import ParticleComponent from './particle-container';
+// import ParticleComponent from './particle-container';
 
 function Landing(props) {
   const scrollTo = () => {
@@ -10,9 +10,6 @@ function Landing(props) {
 
   return (
     <div className="welcomeContainer">
-      <div className="particlesWrapper">
-        <ParticleComponent />
-      </div>
       <div className="welcomeContent">
         <div className="welcomeText">
           Hi there! I'm <span className="inlineColor"> Jared Usher</span>.
