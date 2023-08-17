@@ -32,7 +32,7 @@ function Contact() {
       </div>
       <div className="socailsBtnCntr">
         <button
-          data-tooltip="Mastadon"
+          data-tooltip="Mastodon"
           className="socialBtn"
           onClick={() => handleClick('https://mastodon.social/@jusher')}
         >
