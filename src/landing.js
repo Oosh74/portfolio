@@ -11,11 +11,16 @@ function Landing(props) {
   return (
     <div className="welcomeContainer">
       <div className="welcomeContent">
-        <div className="welcomeText">
+        <h1 className="welcomeText">
           Hi there! I'm <span className="inlineColor"> Jared Usher</span>.
-          <br />
-          <span className="subHeader"> Full stack Software Engineer</span>.
-        </div>
+        </h1>
+        <p className="subHeader">
+          I am passionate about crafting digital experiences that seamlessly
+          blend aesthetics and functionality. With a keen eye for design and a
+          strong foundation in full stack software engineering, I specialize in
+          bridging the gap between development and design. Learn more about me
+          below and thanks for stopping by!
+        </p>
         <button
           className="welcomeButton"
           id="buttonAnim"

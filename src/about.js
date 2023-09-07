@@ -1,80 +1,103 @@
+import socketLogo from './images/socketio_transparent.png';
+import reduxLogo from './images/redux.png';
 import Skills from './skills';
-import React, { useState } from 'react';
-import Modal from 'react-modal';
 
 function About({ isVisible }) {
-  const [modalState, setModalIsOpen] = useState(false);
-
-  const setModalIsOpenToTrue = () => {
-    setModalIsOpen(true);
-    console.log(modalState);
-  };
-  const setModalIsOpenToFalse = () => {
-    setModalIsOpen(false);
-  };
-
-  const customStyles = {
-    content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-      width: '90vw',
-      height: '70vh',
-      backgroundColor: '#12171c',
+  const skillsArr = [
+    {
+      name: 'JavaScript',
+      imageUrl:
+        'https://icongr.am/devicon/javascript-original.svg?size=75&color=000000',
     },
-    overlay: {
-      zIndex: 9999,
-      background: 'rgba(150, 150, 150, 0.75)',
+    {
+      name: 'React',
+      imageUrl:
+        'https://icongr.am/devicon/react-original.svg?size=75&color=000000',
     },
-  };
+    {
+      name: 'Express',
+      imageUrl:
+        'https://icongr.am/devicon/express-original-wordmark.svg?size=75&color=000000',
+    },
+    {
+      name: 'Node.js',
+      imageUrl:
+        'https://icongr.am/devicon/nodejs-original.svg?size=75&color=000000',
+    },
+    {
+      name: 'PostgreSQL',
+      imageUrl:
+        'https://icongr.am/devicon/postgresql-original.svg?size=75&color=000000',
+    },
+    {
+      name: 'Sequelize',
+      imageUrl:
+        'https://icongr.am/devicon/sequelize-original.svg?size=75&color=000000',
+    },
+    {
+      name: 'Git',
+      imageUrl:
+        'https://icongr.am/devicon/git-original.svg?size=75&color=000000',
+    },
+    {
+      name: 'Heroku',
+      imageUrl:
+        'https://icongr.am/devicon/heroku-original.svg?size=75&color=000000',
+    },
+    {
+      name: 'HTML5',
+      imageUrl:
+        'https://icongr.am/devicon/html5-original.svg?size=75&color=000000',
+    },
+    {
+      name: 'CSS3',
+      imageUrl:
+        'https://icongr.am/devicon/css3-original.svg?size=75&color=000000',
+    },
+    { name: 'Socket.IO', imageUrl: socketLogo },
+    { name: 'Redux', imageUrl: reduxLogo },
+    {
+      name: 'GitHub',
+      imageUrl:
+        'https://icongr.am/devicon/github-original.svg?size=75&color=currentColor',
+    },
+    {
+      name: 'Bootstrap',
+      imageUrl:
+        'https://icongr.am/devicon/bootstrap-plain.svg?size=75&color=currentColor',
+    },
+  ];
 
   return (
-    <div className="aboutContainer">
+    <div className="contentContainer">
       <div className="headerContainer">
-        <h1 className="header"> About </h1>
+        <h2 className="header"> About </h2>
       </div>
-      <div className="aboutContent">
-        <p className="aboutConHead">
-          I am a full stack software engineer from New Jersey.
+      <div>
+        <p className="contentBody">
+          I specialize in a variety of languages and tools such JavaScript, CSS,
+          React, Express, and PostgreSQL. You can take a look at the
+          technologies I use most frequently below. I enjoy breaking complex
+          problems down into simple solutions, and delivering elegant front end
+          experiences.<br></br> <br></br>By embracing both the artistic and
+          technical aspects of the digital landscape, I am dedicated to crafting
+          visually appealing, intuitive, and high-performing websites and
+          applications that captivate users while delivering seamless
+          functionality.I am always striving to improve, learn, and write
+          professional code. When I'm not coding, I enjoy playing video games,
+          being active, and reading.
         </p>
-        <p className="aboutConBody">
-          I specialize in web development utilizing React, Node, Express, and
-          PostgreSQL. I enjoy breaking complex problems down into simple
-          solutions, and delivering elegant front end experiences. I am always
-          striving to improve, learn, and write professional code. When I'm not
-          coding, I enjoy playing video games, being active, and reading.
-        </p>
-        <p className="aboutConFoot">Check out the technologies I work with:</p>
-        <button
-          className="aboutBtn"
-          onClick={() => {
-            setModalIsOpenToTrue();
-          }}
-        >
-          <img
-            src="https://icongr.am/fontawesome/code.svg?size=128&color=ffffff"
-            alt="skillsButton"
-          />
-        </button>
       </div>
-      <Modal
-        isOpen={modalState}
-        style={customStyles}
-        closeTimeoutMS={500}
-        onRequestClose={setModalIsOpenToFalse}
-      >
-        <div className="modalClose">
-          <button onClick={setModalIsOpenToFalse}>
-            <img
-              src={'https://icongr.am/clarity/close.svg?size=128&color=1d2227'}
-              alt="close"
-            />
-          </button>
+      <div>
+        <h3 className="about_h3">Check out the technologies I work with:</h3>
+        <div className="skillsContainer">
+          <div className="imageGrid">
+            {skillsArr.map((skill, index) => (
+              <Skills key={index} name={skill.name} imageUrl={skill.imageUrl} />
+            ))}
+          </div>
         </div>
-        <Skills />
-      </Modal>
+      </div>
     </div>
   );
 }

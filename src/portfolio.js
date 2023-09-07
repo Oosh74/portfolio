@@ -1,121 +1,51 @@
 import bookShopper from './images/bookshoppericon.png';
 import drawBit from './images/drawbiticon.png';
 import dataDash from './images/datadashicon.png';
+import PortfolioCard from './portfolio-card';
 
-function Portfolio() {
+const cardData = [
+  {
+    imgSrc: bookShopper,
+    title: 'BookShopper',
+    description: 'A mock e-commerce website featuring books.',
+    githubLink: 'https://github.com/Crafty-Cranberries/Book-Shopper',
+    projectLink: 'https://book-shopper.herokuapp.com/',
+  },
+  {
+    imgSrc: dataDash,
+    title: 'Data Dash',
+    description:
+      'A data dashboard that allows users to retrieve and visualize a data set. Under Construction.',
+    githubLink: 'https://github.com/Oosh74/Data_Dashboard',
+    projectLink: 'https://visualdatadash.herokuapp.com/',
+  },
+  {
+    imgSrc: drawBit,
+    title: 'DrawBit',
+    description:
+      'A realtime multiplayer progressive web application inspired by the game pictionary.',
+    githubLink: 'https://github.com/Metallic-Bees/DrawBit',
+    projectLink: 'https://drawbit.herokuapp.com/',
+  },
+];
+
+const Portfolio = () => {
   const handleClick = (link) => {
-    window.open(link);
+    window.open(link, '_blank');
   };
 
   return (
-    <div className="portfolioContainer">
+    <section className="contentContainer">
       <div className="headerContainer">
-        <h1 className="header"> PORTFOLIO </h1>
+        <h2 className="header"> Portfolio </h2>
       </div>
       <div className="cardContainer">
-        {/*CARD START*/}
-        <div className="card">
-          <div className="cardProfile">
-            <img src={bookShopper} alt="bookshopper" />
-          </div>
-          <div className="cardBanner"></div>
-          <div className="cardTitle">
-            <h1> BookShopper </h1>
-          </div>
-          <div className="cardContent">
-            <p>A mock e-commerce website featuring books.</p>
-          </div>
-          <div className="cardBtnCont">
-            <button
-              className="cardBtn"
-              onClick={() =>
-                handleClick(
-                  'https://github.com/Crafty-Cranberries/Book-Shopper'
-                )
-              }
-            >
-              GitHub
-            </button>
-            <button
-              className="cardBtn"
-              onClick={() => handleClick('https://book-shopper.herokuapp.com/')}
-            >
-              Project
-            </button>
-          </div>
-        </div>
-        {/*CARD END*/}
-        {/*CARD START*/}
-        <div className="card">
-          <div className="cardProfile">
-            <img src={dataDash} alt="dataDash" />
-          </div>
-          <div className="cardBanner"></div>
-          <div className="cardTitle">
-            <h1> Data Dash </h1>
-          </div>
-          <div className="cardContent">
-            <p>
-              A data dashboard that allows users to retrieve and visualize a
-              data set. <b>Under Construction.</b>
-            </p>
-          </div>
-          <div className="cardBtnCont">
-            <button
-              className="cardBtn"
-              onClick={() =>
-                handleClick('https://github.com/Oosh74/Data_Dashboard')
-              }
-            >
-              GitHub
-            </button>
-            <button
-              className="cardBtn"
-              onClick={() =>
-                handleClick('https://visualdatadash.herokuapp.com/')
-              }
-            >
-              Project
-            </button>
-          </div>
-        </div>
-        {/*CARD END*/}
-        {/*CARD START*/}
-        <div className="card">
-          <div className="cardProfile">
-            <img src={drawBit} alt="drawBit" />
-          </div>
-          <div className="cardBanner"></div>
-          <div className="cardTitle">
-            <h1> DrawBit </h1>
-          </div>
-          <div className="cardContent">
-            <p>
-              A realtime multiplayer progressive web application inspired by the
-              game pictionary.
-            </p>
-          </div>
-          <div className="cardBtnCont">
-            <button
-              className="cardBtn"
-              onClick={() =>
-                handleClick('https://github.com/Metallic-Bees/DrawBit')
-              }
-            >
-              GitHub
-            </button>
-            <button
-              className="cardBtn"
-              onClick={() => handleClick('https://drawbit.herokuapp.com/')}
-            >
-              Project
-            </button>
-          </div>
-        </div>
-        {/*CARD END*/}
+        {cardData.map((card, index) => (
+          <PortfolioCard key={index} onClick={handleClick} {...card} />
+        ))}
       </div>
-    </div>
+    </section>
   );
-}
+};
 
 export default Portfolio;
