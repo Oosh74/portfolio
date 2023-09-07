@@ -62,7 +62,7 @@ const Navbar = ({ headerProp, ...props }) => {
             scrollTo(props.props[0].ref.current);
           }}
         >
-          HOME
+          Home
         </button>
         <button
           type="button"
@@ -71,7 +71,7 @@ const Navbar = ({ headerProp, ...props }) => {
             scrollTo(props.props[1].ref.current);
           }}
         >
-          ABOUT
+          About
         </button>{' '}
         <button
           type="button"
@@ -80,7 +80,7 @@ const Navbar = ({ headerProp, ...props }) => {
             scrollTo(props.props[2].ref.current);
           }}
         >
-          PORTFOLIO
+          Portfolio
         </button>{' '}
         <button
           type="button"
@@ -89,7 +89,7 @@ const Navbar = ({ headerProp, ...props }) => {
             scrollTo(props.props[3].ref.current);
           }}
         >
-          CONTACT
+          Contact
         </button>
       </nav>
     </div>

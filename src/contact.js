@@ -10,14 +10,13 @@ function Contact() {
   };
 
   return (
-    <div className="contactContainer">
+    <section className="contentContainer">
       <div className="headerContainer">
-        <h1 className="header"> CONTACT </h1>
+        <h2 className="header"> Contact </h2>
       </div>
-      <p>
+      <p className="contentBody footerText">
         Feel free to reach out if you are interested in working together,
-        {'\n'} have any questions, or just want to connect. {'\n'} I am
-        currently seeking new opportunities.
+        {'\n'} have any questions, or just want to connect.
       </p>
       <div className="emailBtnCntr">
         <button className="contactBtn" onClick={() => handleClick()}>
@@ -62,7 +61,7 @@ function Contact() {
           />
         </button>
       </div>
-    </div>
+    </section>
   );
 }
 
