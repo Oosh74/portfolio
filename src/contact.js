@@ -26,6 +26,8 @@ function Contact() {
               'https://icongr.am/octicons/mail.svg?size=25&color=currentColor'
             }
             alt="email"
+            height="25px"
+            width="25px"
           />
         </button>
       </div>
@@ -35,7 +37,7 @@ function Contact() {
           className="socialBtn"
           onClick={() => handleClick('https://mastodon.social/@jusher')}
         >
-          <img src={mastLogo} alt="twitter" />
+          <img src={mastLogo} alt="twitter" height="56px" width="56px" />
         </button>
         <button
           className="socialBtn"
@@ -46,6 +48,8 @@ function Contact() {
             className="socialsImg"
             src={'https://icongr.am/feather/github.svg?size=128&color=ffffff'}
             alt="gitHub"
+            height="56px"
+            width="56px"
           />
         </button>
         <button
@@ -55,9 +59,11 @@ function Contact() {
         >
           <img
             src={
-              'https://icongr.am/devicon/linkedin-original.svg?size=128&color=currentColor'
+              'https://icongr.am/devicon/linkedin-original.svg?size=56&color=currentColor'
             }
             alt="linkedIn"
+            height="56px"
+            width="56px"
           />
         </button>
       </div>
