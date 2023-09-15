@@ -28,6 +28,7 @@ function Contact() {
             alt="email"
             height="25px"
             width="25px"
+            loading="lazy"
           />
         </button>
       </div>
@@ -37,7 +38,13 @@ function Contact() {
           className="socialBtn"
           onClick={() => handleClick('https://mastodon.social/@jusher')}
         >
-          <img src={mastLogo} alt="twitter" height="56px" width="56px" />
+          <img
+            src={mastLogo}
+            alt="twitter"
+            height="56px"
+            width="56px"
+            loading="lazy"
+          />
         </button>
         <button
           className="socialBtn"
@@ -50,6 +57,7 @@ function Contact() {
             alt="gitHub"
             height="56px"
             width="56px"
+            loading="lazy"
           />
         </button>
         <button
@@ -64,6 +72,7 @@ function Contact() {
             alt="linkedIn"
             height="56px"
             width="56px"
+            loading="lazy"
           />
         </button>
       </div>

@@ -37,7 +37,6 @@ h3,
 h4,
 h5 {
   margin: 3rem 0 1.38rem;
-  font-weight: 400;
   line-height: 1.3;
 }
 
@@ -136,7 +135,6 @@ body {
 }
 
 .subHeader {
-  font-weight: 400;
   line-height: 1.7;
   margin-top: 32px;
   margin-bottom: 56px;
@@ -150,9 +148,6 @@ body {
   justify-content: center;
   width: 100vw;
   height: 85vh;
-}
-
-.welcomeContainer {
   background-image: url('/src/images/starmap-background\ \(1).webp');
   background-size: cover;
   background-attachment: fixed;
@@ -186,7 +181,6 @@ body {
   color: white;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   background-color: #1d2227;
   border-radius: 8px;
   border: none;
@@ -296,7 +290,6 @@ body {
 }
 
 .contentBody {
-  font-weight: 400;
   line-height: 1.7;
   margin-top: 32px;
   margin-bottom: 40px;
@@ -432,7 +425,6 @@ body {
   align-items: center;
   justify-content: center;
   flex-grow: 0;
-  overflow: none;
   padding-left: 32px;
   padding-right: 32px;
 }
@@ -440,7 +432,6 @@ body {
 .cardContent {
   display: flex;
   flex-grow: 0;
-  overflow: none;
   padding-left: 32px;
   padding-right: 32px;
   margin-top: 16px;
@@ -596,11 +587,6 @@ body {
 @media (max-width: 1025px) {
   .welcomeContainer {
     width: 100%;
-  }
-
-  .html,
-  .wrapper {
-    overflow: hidden;
   }
 
   .welcomeContainer {
