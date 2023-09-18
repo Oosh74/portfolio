@@ -21,7 +21,7 @@ function App() {
   ];
 
   return (
-    <div className="wrapper">
+    <div>
       {/* ----Navbar----- */}
       <Navbar props={sectionRefs} headerProp={headerRef} />
       {/* ----Landing Page----- */}
@@ -29,16 +29,18 @@ function App() {
         <Landing portfolioProp={portfolioRef} />
       </div>
       {/* ----About----- */}
-      <div ref={aboutRef}>
-        <About />
-      </div>
-      {/* ----Portfolio----- */}
-      <div ref={portfolioRef}>
-        <Portfolio />
-      </div>
-      {/* ----Contact/Footer----- */}
-      <div ref={contactRef}>
-        <Contact />
+      <div className="wrapper">
+        <div ref={aboutRef}>
+          <About />
+        </div>
+        {/* ----Portfolio----- */}
+        <div ref={portfolioRef}>
+          <Portfolio />
+        </div>
+        {/* ----Contact/Footer----- */}
+        <div ref={contactRef}>
+          <Contact />
+        </div>
       </div>
     </div>
   );
